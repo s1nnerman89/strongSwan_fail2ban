@@ -1,0 +1,12 @@
+[strongswan]
+ignoreip = 192.168.0.0/24
+enabled = true
+port = 500,4500
+protocol = udp
+filter = strongswan
+action = iptables-multiport[name=strongswan, port="500,4500", protocol=udp]
+maxretry = 3
+bantime = 36000
+findtime = 36000
+logpath = /var/log/syslog
+
