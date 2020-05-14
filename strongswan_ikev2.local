@@ -1,0 +1,10 @@
+[strongswan_ikev2]
+enabled = true
+port = 500,4500
+protocol = udp
+filter = strongswan_ikev2
+action = iptables-multiport[name=strongswan_ikev2, port="500,4500", protocol=udp]
+maxretry = 3
+bantime = -1
+findtime = 36000
+logpath = /var/log/charon/charon.log
